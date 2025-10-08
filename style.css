@@ -8,30 +8,30 @@
 /* fonts  */
 @font-face {
     font-family: 'Merriweather';
-    src: url('/docs/assets/fonts/Merriweather_24pt-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/Merriweather_24pt-ExtraBold.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';
-    src: url( '/docs/assets/fonts/Merriweather_24pt-ExtraBoldItalic.ttf') format('truetype');
+    src: url( '/assets/fonts/Merriweather_24pt-ExtraBoldItalic.ttf') format('truetype');
     font-style: italic;
 }
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('/docs/assets/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('/docs/assets/fonts/PlayfairDisplay-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/PlayfairDisplay-ExtraBold.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: 'OpenSans';
-    src: url('/docs/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
     font-weight: 600;
@@ -104,6 +104,7 @@ header {
     cursor: pointer;
     transition: border .3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: transparent;
+    margin-right: 2rem;
 }
 .bar {
     width: 20px;
@@ -185,20 +186,24 @@ h1 {
     transition: background-color .3s ease-in-out, transform 0.3s ease-in-out, color .2s ease-in-out;
     margin-bottom: .6rem;
 }
-.btn:hover {
+.btn:hover, button:hover {
     background-color: var(--Accent);
     color: #111827;
     transform: translateY(-5px);
 }
 /* general link style */
 a {
-   
     font-weight: 700;
     text-decoration: none;
+    margin: .7rem;
+}
+a:hover {
+    color: var(--Accent);
 }
 p {
     font-family: 'OpenSans', sans-serif, serif;
     font-size: clamp(1.3rem, 2.5vvw + 0.5rem, 2rem);
+    text-align: justify;
     margin: .8rem auto;
 }
 /* image style */
@@ -207,4 +212,101 @@ img {
     max-width: 500px;
     width: 100%;
     height: auto;
+}
+/* form */
+form {
+    margin: 4rem auto;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'OpenSans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+textarea {
+    max-width: 550px;
+}
+input:focus, textarea:focus {
+    border-color:var(--Accent) ;
+    outline:1px solid #e5e7eb;
+}
+input:hover, textarea:hover {
+       box-shadow:0 3px 6px rgba(0, 0, 0, 0.1);
+
+}
+button {
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--light);
+    padding: 0.75rem 3rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out, transform 0.3s ease-in-out, color .2s ease-in-out;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+/* scroll to top*/
+#scrollBtn{
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    height: 35px;
+    font-size: 1.1rem;
+    width: 35px;
+    padding: 10px 12px;
+    background-color: var(--Accent);
+    z-index: 6000;
+}
+/* footer */
+footer {
+    padding: 20px auto;
+    background: var(--primary-color);
+}
+footer a {
+    color: var(--primary-text-color);
+}
+footer a:hover {
+    color: #111827;
+    text-decoration: underline;
+}
+footer .footerDiv {
+padding: 20px;
+
+}
+.reserved {
+    text-align: center;
+}
+footer ul li {
+    margin: 1rem auto;
+    list-style-type: none;
 }

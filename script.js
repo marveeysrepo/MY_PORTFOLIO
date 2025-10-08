@@ -35,5 +35,6 @@ if (currentTheme === 'darkMode') {
             localStorage.removeItem('theme');
         }
     });
+    console.log("script loaded");
 };
 dynamicToggle();
