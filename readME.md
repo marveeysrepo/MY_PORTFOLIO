@@ -40,7 +40,8 @@ MY_PORTFOLIO/
 
 ## Setup and Installation
 1. Clone this repository
-   ``` git clone https://github.com/marveeysrepo/MY_PORTFOLIO.git
+   ```bash
+    git clone https://github.com/marveeysrepo/MY_PORTFOLIO.git
    ```
 2. Open the index file in your browser, or use a live server.
 
@@ -71,3 +72,4 @@ This project is open source under the MIT License
 Created by Marvellous Ediagbonya (Marveey Goodlife)
 Email: marvellousediagbonya683@gmail.com
 LinkedIn: https://www.linkedin.com/in/marvellous-ediagbonya/
+
