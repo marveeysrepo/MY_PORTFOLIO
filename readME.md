@@ -4,7 +4,6 @@ A simple personal portfolio built with **HTML**, **CSS**, and **JAVASCRIPT** -  
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Folder Structure](#folder-structure)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Customization](#customization)
@@ -25,19 +24,7 @@ Built entirely with Front-End web technologies (**HTML**, **CSS**, **JAVASCRIPT*
 - Interactive sections powered by Javascript
 - Contact Form and Social media handles
 - Custom animations and hover effects
-
-## Folder Structure
-MY_PORTFOLIO/
-|
-|---- index.html
-|---- /css/
-|   |____style.css
- |----- /js/
-| |____ index.js
-| |---- /images/
-     |____ (project screenshots, icons, etc)
-| |____ README.md
-
+  
 ## Setup and Installation
 1. Clone this repository
    ```bash
@@ -72,4 +59,5 @@ This project is open source under the MIT License
 Created by Marvellous Ediagbonya (Marveey Goodlife)
 Email: marvellousediagbonya683@gmail.com
 LinkedIn: https://www.linkedin.com/in/marvellous-ediagbonya/
+
 
