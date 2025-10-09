@@ -1,4 +1,4 @@
-/* universal style */
+#/* universal style */
 *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -140,7 +140,7 @@ nav {
     z-index: 1000;
     transition: transform .3s ease-in-out, opacity .3s ease-in-out, border .3s ease-in-out;
     width: 70%;
-    height: 80%;
+    height: 100%;
     opacity:0 ;
     transform: translateX(-100%);
 
