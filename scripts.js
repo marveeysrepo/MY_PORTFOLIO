@@ -2,7 +2,13 @@
 
 const nav = document.querySelector("nav");
 const hamburgerMenu = document.querySelector("#hamburgerMenu");
-    
+const scrollBtn = document.querySelector("#scrollBtn")
+/* reusable function */
+function closeMenu(){
+    nav.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', "false");
+};
+
 /* function to toggle navigation and dark mode */
 function dynamicToggle() {
     /* get element from dom */
@@ -19,14 +25,13 @@ const body = document.documentElement;
         hamburgerMenu.setAttribute("aria-expanded", !expanded);
         nav.classList.toggle('active');  
     });
-/* hamburger ends */
 
     /* close nav on click of links */
-    ulLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            closeMenu();});
-    });
-
+    nav.addEventListener("click", (e) => {
+        if (e.target.matches('a')) {
+            closeMenu();
+        }
+    })
 
 /* load saved theme from local storage */
     const currentTheme = localStorage.getItem('theme');
@@ -42,8 +47,7 @@ if (currentTheme === 'darkMode') {
             localStorage.removeItem('theme');
         }
     }); 
-};
-dynamicToggle();
+}; dynamicToggle();
 
 /* close nav when user clicks outside it */
 document.addEventListener("click", (e) => {
@@ -58,8 +62,17 @@ document.addEventListener("click", (e) => {
     };
 });
 
-/* reusable function */
-function closeMenu(){
-    nav.classList.remove('active');
-    hamburgerMenu.setAttribute('aria-expanded', "false");
-};
+/* show scroll to top button */
+window.addEventListener("scroll", () => {
+     const scrollPosition = window.scrollY;
+    if (scrollPosition > 2500) {
+        scrollBtn.classList.add("showScroll");
+    } else {
+        scrollBtn.classList.remove("showScroll");
+    }; 
+});
+
+/* scroll to top */
+scrollBtn.addEventListener("click", () => {
+     window.scrollTo({top: 0, behaviour: "smooth"})
+ })
