@@ -29,7 +29,13 @@ const body = document.documentElement;
     /* close nav on click of links */
     nav.addEventListener("click", (e) => {
         if (e.target.matches('a')) {
+            e.preventDefault();
+            const targetId = e.target.getAttribute("href");
             closeMenu();
+
+            setTimeout(() => {
+                document.querySelector(targetId).scrollIntoView({ behaviour: "smooth", });
+            }, 300)
         }
     })
 
