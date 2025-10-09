@@ -29,7 +29,13 @@ const body = document.documentElement;
     /* close nav on click of links */
     nav.addEventListener("click", (e) => {
         if (e.target.matches('a')) {
+            e.preventDefault();
+            const targetId = e.target.getAttribute("href");
             closeMenu();
+
+            setTimeout(() => {
+                document.querySelector(targetId).scrollIntoView({ behaviour: "smooth", });
+            }, 300)
         }
     })
 
@@ -65,7 +71,7 @@ document.addEventListener("click", (e) => {
 /* show scroll to top button */
 window.addEventListener("scroll", () => {
      const scrollPosition = window.scrollY;
-    if (scrollPosition > 2500) {
+    if (scrollPosition > 1000) {
         scrollBtn.classList.add("showScroll");
     } else {
         scrollBtn.classList.remove("showScroll");
