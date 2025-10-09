@@ -65,7 +65,7 @@ document.addEventListener("click", (e) => {
 /* show scroll to top button */
 window.addEventListener("scroll", () => {
      const scrollPosition = window.scrollY;
-    if (scrollPosition > 2500) {
+    if (scrollPosition > 1000) {
         scrollBtn.classList.add("showScroll");
     } else {
         scrollBtn.classList.remove("showScroll");
